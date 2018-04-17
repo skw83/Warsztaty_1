@@ -13,14 +13,14 @@ public static void main(String[] args) {
     
     public static int guessNumber(){
     	Random generator = new Random();
-    	int iNumberForGuess = generator.nextInt(99) +1;			// Wylosowanie liczby z zakresu od 1 - 100 -> dodajemy 1 żeby obejść losowanie od 0
+    	int iNumberForGuess = generator.nextInt(99) + 1;			// Wylosowanie liczby z zakresu od 1 - 100 -> dodajemy 1 żeby obejść losowanie od 0
     	System.out.println(iNumberForGuess);
     	
 		System.out.println("Zgadnij liczbę :");
 		Scanner scan = new Scanner(System.in);
 //		int iNumber = scan.nextInt();
 		while(!scan.hasNextInt()){
-			System.out.println("Podaj liczbę całkowitą");
+			System.out.println("To nie jest liczba");
 			scan.next();
 		}
 		
@@ -41,7 +41,6 @@ public static void main(String[] args) {
 		int iExitNumber = iGuessNumber;
 		return iExitNumber ;
 	}
-
 }
 
 
